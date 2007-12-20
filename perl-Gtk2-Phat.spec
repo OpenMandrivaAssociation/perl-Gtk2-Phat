@@ -19,6 +19,7 @@ BuildRequires:	perl-ExtUtils-PkgConfig
 BuildRequires:	phat-devel
 BuildRequires:	glitz-devel
 BuildRequires:	gtkspell-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module allows a perl developer to access the widgets of the Phat widget 
