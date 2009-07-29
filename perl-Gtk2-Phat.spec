@@ -1,16 +1,16 @@
-%define module	Gtk2-Phat
-%define name	perl-%{module}
-%define version 0.08
-%define release %mkrel 1
+%define upstream_name	 Gtk2-Phat
+%define upstream_version 0.08
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl interface to the Phat widget collection
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/%{module}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{module}/
+Url:            http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
 BuildRequires:	perl-Gtk2
 BuildRequires:	perl-Glib > 1.00
@@ -19,7 +19,7 @@ BuildRequires:	perl-ExtUtils-PkgConfig
 BuildRequires:	phat-devel
 BuildRequires:	glitz-devel
 BuildRequires:	gtkspell-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module allows a perl developer to access the widgets of the Phat widget 
@@ -27,7 +27,7 @@ collection which is geared toward pro-audio apps. The goal is to eliminate
 duplication of effort and provide some standardization.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -48,5 +48,4 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %{perl_vendorarch}/Gtk2
 %{perl_vendorarch}/auto/Gtk2
-
 %{_mandir}/*/*
