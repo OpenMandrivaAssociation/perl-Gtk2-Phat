@@ -2,14 +2,14 @@
 %define upstream_version 0.08
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Version:    %{upstream_version}
+Release:	5
 
 Summary:	Perl interface to the Phat widget collection
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:            https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:            https://metacpan.org/dist/Gtk2-Phat
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Phat-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -91,7 +91,7 @@ rm -rf %{buildroot}
 - new version
 - spec cleanup
 
-* Fri Sep 30 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.01-3mdk
+* Fri Sep 30 2005 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.01-3mdk
 - fix buildrequires
 
 * Thu May 19 2005 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.01-2mdk
