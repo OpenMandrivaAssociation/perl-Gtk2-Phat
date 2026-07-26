@@ -1,15 +1,13 @@
 %define upstream_name	 Gtk2-Phat
-%define upstream_version 0.08
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	5
+Version:    0.08
+Release:	6
 
 Summary:	Perl interface to the Phat widget collection
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:            https://metacpan.org/dist/Gtk2-Phat
-Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Phat-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Phat-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ collection which is geared toward pro-audio apps. The goal is to eliminate
 duplication of effort and provide some standardization.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -59,9 +57,7 @@ rm -rf %{buildroot}
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-1mdv2011.0
 + Revision: 403231
-- rebuild using %%perl_convert_version
-
-* Fri Oct 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.1
+- rebuild using %0.08 Fri Oct 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.1
 + Revision: 294654
 - update to new version 0.08
 
